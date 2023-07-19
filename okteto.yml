@@ -22,10 +22,10 @@ build:
     target: dev
 
 deploy:
-  - name: Deploy PostgreSQL
-    command: helm upgrade --install postgresql postgresql/postgresql-11.6.21.tgz -f postgresql/values.yml --version 11.6.21 --debug
   - name: Deploy Kafka
     command:  helm upgrade --install kafka kafka/kafka-18.0.3.tgz -f kafka/values.yml --version 18.0.3
+  - name: Deploy PostgreSQL
+    command: helm upgrade --install postgresql postgresql/postgresql-11.6.21.tgz -f postgresql/values.yml --version 11.6.21 --debug
   - name: Deploy MongoDB
     command:  helm upgrade --install mongodb mongodb/mongodb-12.1.30.tgz -f mongodb/values.yml --version 12.1.30
   - name: Deploy Frontend
