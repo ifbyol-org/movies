@@ -10,14 +10,14 @@ build:
     context: catalog
   rent:
     context: rent
-  api:
+  api2:
     context: api
   api-dev:
     context: api
     target: dev
   worker:
     context: worker
-  worker-dev:
+  worker-dev1:
     context: worker
     target: dev
 
