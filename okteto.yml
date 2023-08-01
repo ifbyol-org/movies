@@ -6,18 +6,21 @@ build:
   frontend-dev:
     context: frontend
     target: dev
+    depends_on: frontend
   catalog:
     context: catalog
+    depends_on: frontend
   rent:
     context: rent
-  api2:
+    depends_on: frontend
+  api3:
     context: api
   api-dev:
     context: api
     target: dev
   worker:
     context: worker
-  worker-dev1:
+  worker-dev3:
     context: worker
     target: dev
 
