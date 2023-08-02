@@ -3,26 +3,26 @@ icon: https://apps.okteto.com/movies/icon.png
 build:
   frontend:
     context: frontend
-  frontend-dev:
-    context: frontend
-    target: dev
-    depends_on: frontend
-  catalog:
-    context: catalog
-    depends_on: frontend
-  rent:
-    context: rent
-    depends_on: frontend
-  api3:
-    context: api
-  api-dev:
-    context: api
-    target: dev
-  worker:
-    context: worker
-  worker-dev3:
-    context: worker
-    target: dev
+  #frontend-dev:
+  #  context: frontend
+  #  target: dev
+  #  depends_on: frontend
+  #catalog:
+  #  context: catalog
+  #  depends_on: frontend
+  #rent:
+  #  context: rent
+  #  depends_on: frontend
+  #api3:
+  #  context: api
+  #api-dev:
+  #  target: dev
+  ##  context: api
+  #worker:
+  #  context: worker
+  #worker-dev3:
+  #  context: worker
+  #  target: dev
 
 deploy:
   image: okteto/pipeline-runner:1.0.0
